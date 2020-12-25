@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-dashboards',
@@ -10,17 +9,13 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class DashboardsComponent implements OnInit {
 
 
-  constructor(public route: Router, private SpinnerService: NgxSpinnerService) { }
+  constructor(public route: Router) { }
 
   ngOnInit(): void {
   }
-  movieList(movielist) {
-    console.log("Welcome Movie List Page>>>", movielist);
-    this.SpinnerService.show()
-    setTimeout(() => {
-      this.route.navigate([`${movielist}`]);
-      this.SpinnerService.hide()
-    }, 1000);
+  movieList(type) {
+    console.log("Welcome Movie type List Page>>>", type);
+    this.route.navigate([`/movie/${type}`]);
 
   }
 

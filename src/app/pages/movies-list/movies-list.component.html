@@ -1,5 +1,11 @@
 <div class="container">
+    <h3 class="text-center my-2 card-header">{{type=='top'? 'TOP RATED MOVIE LIST' : 'UPCOMING MOVIE LIST'}}</h3>
     <div class="row py-5 px-5">
-        Movie List will updated soon.....
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-2" *ngFor="let movie of movieList">
+
+            <app-movie-card [movie]="movie"></app-movie-card>
+        </div>
     </div>
+
 </div>

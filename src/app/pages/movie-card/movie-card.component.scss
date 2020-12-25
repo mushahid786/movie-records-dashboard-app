@@ -1,0 +1,15 @@
+.card-text-style {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100px;
+}
+.date-class {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
